@@ -1,0 +1,60 @@
+.acc-show,
+.acc-hide {
+  position: relative;
+}
+
+.acc-show:after {
+  content: "\25B2";
+  
+	position: absolute;
+  top: 50%;
+  right: 20px;
+  
+  display: inline-block;
+  
+  font-size: $f-size1;
+  color: $color2;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.acc-hide:after {
+  content: "\25BC";
+  
+	position: absolute;
+  top: 50%;
+  right: 20px;
+  
+  display: inline-block;
+  
+  font-size: $f-size1;
+  color: $color2;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.acc-show + .acc-panel {
+	display: block;
+}
+
+.acc-hide + .acc-panel {
+	display: none;
+}
+
+.acc-panel__item {
+  margin-bottom: 20px;
+  padding-left: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: $color1;
+
+  & div {
+    margin-top: 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
