@@ -74,12 +74,6 @@ html {
   margin-bottom: 20px;
 }
 
-@media (max-width: 640px) {
-  .h3 {
-    display: none;
-  }
-}
-
 .links {
   text-decoration: none;
   color: #ffffff;
@@ -310,12 +304,6 @@ main {
   padding-left: 30px;
 }
 
-@media (max-width: 640px) {
-  .list {
-    display: none;
-  }
-}
-
 .list__item {
   margin-bottom: 10px;
   font-size: 14px;
@@ -323,6 +311,7 @@ main {
 }
 
 .description {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,24 +332,99 @@ main {
   }
 }
 
-.description > div {
-  padding-top: 20px;
-  padding-left: 20px;
-}
-
 .description p {
   font-size: 12px;
   font-weight: 600;
 }
 
+.description a {
+  cursor: pointer;
+}
+
+.description img {
+  width: 100%;
+}
+
+.description__text {
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #ffffff;
+}
+
 @media (max-width: 640px) {
-  .description p {
+  .description__text {
     display: none;
   }
 }
 
-.description a {
-  cursor: pointer;
+.description__text.visible {
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+.top-panel,
+.bottom-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+  height: 50px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2D495B;
+}
+
+@media (max-width: 640px) {
+  .top-panel,
+  .bottom-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.top-panel > span,
+.bottom-panel > span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #A4AD93;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
+
+.top-panel {
+  top: 0;
+  padding: 0 30px 0 30px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-panel {
+  bottom: 0;
+  padding: 0 20px 0 20px;
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+  .bottom-panel {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .show-project {

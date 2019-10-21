@@ -196,6 +196,10 @@ function swipeDetect(el) {
     
         createLayer(src);
       }
+      else if (e.target.dataset) {
+
+        showDesc(e.target.dataset.showdesc);
+      }
     }
 
     e.preventDefault();
@@ -281,3 +285,19 @@ sliderContainer.addEventListener('click', function(e) {
   
   e.preventDefault();
 });
+
+
+//show description
+function showDesc(num) {
+
+  let desc = document.querySelectorAll('.description__text');
+
+  if (desc[num].classList.contains('visible')) {
+
+    desc[num].classList.remove('visible');
+  }
+  else {
+    
+    desc[num].classList.add('visible');
+  }
+}
