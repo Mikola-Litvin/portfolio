@@ -1127,7 +1127,7 @@ footer img {
 
 
 
-/* sfgdgghhfhfhfhhhjghjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj*/
+/* media query max-width: 375px */
 @media only screen and (max-width: 375px) {
 	/* header & nav */
 	h1 {

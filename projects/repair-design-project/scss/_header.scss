@@ -1,0 +1,295 @@
+html {
+  background-color: #252525;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  background-color: $bg3;
+}
+
+.h2 {
+  font-family: $font3;
+  font-size: 20px;
+  font-weight: normal;
+  color: $color3;
+  line-height: 1.38;
+  @include upper;
+
+  @media (max-width: 375px) {
+    text-align: center;
+  }
+
+  & .h2__item {
+    display: block;
+    margin: 13px auto 0;
+
+    @media (max-width: 375px) {
+      margin-top: 18px;
+    }
+  }
+}
+
+.h2_hazel {
+  font-size: 27px;
+  color: $color2;
+
+  @media (max-width: 375px) {
+    font-size: 22px;
+  }
+}
+
+.h2_white {
+  color: $color1;
+}
+
+.h2_with-line {
+  position: relative;
+  width: 304px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 25%;
+    right: 36px;
+
+    display: block;
+    width: 92px;
+
+    border: 1px solid $color2;
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+}
+
+.h3 {
+  margin-bottom: 14px;
+
+  font-family: $font3;
+  font-size: 18px;
+  font-weight: normal;
+  color: $color6;
+}
+
+.header,
+.footer {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 83px;
+  padding-left: 82px;
+  padding-right: 100px;
+
+  background-color: $bg1;
+
+
+  @media (max-width: 1140px) {
+
+    & .button {
+      display: none;
+    }
+  }
+
+  @media (max-width: 976px) {
+    padding-left: $padd1;
+    padding-right: $padd1;
+  }
+
+  @media (max-width: 486px) {
+    height: 57px;
+  }
+
+  & .button {
+    flex-basis: 161px;
+    height: 37px;
+  }
+}
+
+.footer {
+  height: 133px;
+  padding-left: 92px;
+  padding-right: 92px;
+
+  @media (max-width: 976px) {
+    height: 67px;
+    padding-left: $padd1;
+    padding-right: $padd1;
+  }
+
+  @media (max-width: 375px) {
+    display: none;
+  }
+}
+
+.logo {
+  font-family: $font1;
+  font-size: 14px;
+  font-weight: normal;
+  color: $color2;
+  @include upper;
+
+
+  @media (max-width: 1248px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 976px) {
+    font-size: 12px;
+  }
+}
+
+.phone {
+  margin-left: 25px;
+
+  font-family: $font1;
+  font-size: 14px;
+  color: $color2;
+
+  @media (max-width: 976px) {
+    margin-left: 0;
+
+    font-size: 12px;
+    text-decoration: none;
+    color: $color1;
+  }
+}
+
+.button {
+  height: 51px;
+
+  font-family: $font1;
+  font-size: 13px;
+  color: $color1;
+  @include upper;
+
+  background-color: $bg4;
+  border: 1px solid $color2;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+  cursor: pointer;
+
+  &:hover, &:active {
+    box-shadow: none;
+  }
+
+  @media (max-width: 375px) {
+    border-radius: 0;
+  }
+}
+
+.button_transparent {
+  background-color: transparent;
+  border-color: $color1;
+  box-shadow: none;
+}
+
+.pagination__arrow {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.pagination__circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+
+  background-color: $bg5;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-left: 30px;
+  }
+
+  &:last-of-type {
+    margin-right: 30px;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 18px;
+  }
+}
+
+.pagination__circle_checked {
+  background-color: $bg3;
+}
+
+.nav-bar {
+  @include flex;
+  justify-content: space-between;
+  width: 623px;
+  margin-bottom: 45px;
+}
+
+.nav-bar__link {
+  font-family: $font3;
+  font-size: 14px;
+  text-decoration: none;
+  color: $color4;
+  @include upper;
+}
+
+.nav-bar__link_selected {
+  text-decoration: underline;
+  color: $color2;
+}
+
+.slider {
+  position: relative;
+
+  @include flex;
+  justify-content: space-between;
+  width: 1379px;
+}
+
+.slider_for-phone {
+  display: none;
+  margin-bottom: 39px;
+  overflow: hidden;
+
+  @media (max-width: 375px) {
+    @include flex;
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.slider__item {
+  flex-basis: 679px;
+  flex-shrink: 0;
+
+  @media (max-width: 375px) {
+    flex-basis: 100%;
+  }
+}
+
+.slider__content {
+  width: 100%;
+}
+
+.slider__button {
+  position: absolute;
+  top: 50%;
+  left: 730px;
+
+  display: block;
+
+  transform: translateY(-58%);
+  cursor: pointer;
+
+  @media (max-width: 375px) {
+    left: 287px;
+
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.slider__button_left {
+  transform: translateY(-58%) rotate(180deg);
+  left: 17px;
+}

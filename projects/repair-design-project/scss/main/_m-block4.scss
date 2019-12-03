@@ -1,0 +1,124 @@
+.main-block4 {
+  @include flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 61px;
+  padding-top: 50px;
+  padding-left: 104px;
+  padding-right: 100px;
+
+  @media (max-width: 1390px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 1290px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 940px) {
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 0;
+    padding-top: 82px;
+    padding-left: $padd1;
+    padding-right: $padd1;
+  }
+
+  & .h2 {
+    flex-basis: 100%;
+    margin-bottom: 35px;
+    text-align: center;
+
+    @media (max-width: 375px) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.mb4-col {
+  
+  @media (max-width: 1220px) {
+    width: 350px;
+  }
+
+  @media (max-width: 1090px) {
+    width: 300px;
+  }
+
+  @media (max-width: 940px) {
+    width: 350px;
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
+}
+
+.mb4-col:nth-of-type(2),
+.mb4-col:nth-of-type(3) {
+  
+  @media (max-width: 375px) {
+    margin-top: -88px;
+  }
+}
+
+.mb4-col__list {
+  width: 330px;
+  padding: 26px 34px 0;
+
+  list-style-type: disc;
+
+  background-color: $bg3;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  transform: translateY(-44%) translateX(9.5%);
+
+  @media (max-width: 1220px) {
+    width: 296px;
+  }
+
+  @media (max-width: 1090px) {
+    width: 254px;
+  }
+
+  @media (max-width: 940px) {
+    width: 296px;
+  }
+
+  @media (max-width: 375px) {
+    width: 270px;
+
+    transform: translateY(-54%) translateX(0);
+  }
+}
+
+.mb4-col__list-item {
+  margin-left: 18px;
+  margin-bottom: 15px;
+
+  font-family: $font2;
+  font-size: 15px;
+  color: #959595;
+}
+
+.mb4-col__cost {
+  display: inline-block;
+  width: 228px;
+  height: 54px;
+
+  font-family: $font3;
+  font-size: 18px;
+  text-align: center;
+  @include upper;
+  line-height: 54px;
+  color: $color1;
+
+  background-color: $bg4;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  transform: translateX(-34px) translateY(50%);
+}
+
+.mb4-col__image {
+  width: 100%;
+}

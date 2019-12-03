@@ -1,0 +1,129 @@
+.main-block2 {
+  @include flex;
+  justify-content: space-between;
+  height: 1074px;
+  padding-top: 107px;
+
+  background: url(../assets/images/bg-block2.jpg);
+  background-color: $bg1;
+
+  @media (max-width: 1230px) {
+    justify-content: center;
+    height: 934px;
+    padding-top: 30px;
+  }
+
+  @media (max-width: 375px) {
+    height: 726px;
+    padding-top: 36px;
+
+    background-image: none;
+  }
+}
+
+.mb2-col_left {
+  flex-basis: 543px;
+  flex-shrink: 0;
+  margin-right: 50px;
+
+  padding-top: 74px;
+  padding-left: 101px;
+  padding-right: 29px;
+
+  & .h2_hazel {
+    margin-bottom: 27px;
+  }
+
+  @media (max-width: 1230px) {
+
+    & .pagination {
+      display: none;
+    }
+  }
+
+  @media (max-width: 550px) {
+    flex-basis: 100%;
+    align-items: flex-start;
+    margin-right: 0;
+    padding-top: 0;
+    padding-left: $padd1;
+    padding-right: $padd1;
+
+    & .h2_hazel {
+      width: 250px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.mb2-col_right {
+  flex-basis: 847px;
+  overflow: hidden;
+
+  @media (max-width: 1230px) {
+    display: none;
+  }
+}
+
+.mb2-col__text {
+  margin-bottom: 47px;
+
+  font-family: $font2;
+  font-size: 18px;
+  line-height: 1.62;
+  color: $color1;
+
+  @media (max-width: 375px) {
+    margin-bottom: 38px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.mb2-col__list {
+  @include flex;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+
+  @media (max-width: 375px) {
+    margin-bottom: 0;
+  }
+}
+
+.mb2-col__list-item {
+  flex-basis: 45%;
+  height: 107px;
+
+  font-family: $font2;
+  font-size: 15px;
+  line-height: 1.334;
+  color: $color1;
+
+  @media (max-width: 375px) {
+    flex-basis: 50%;
+    font-size: 14px;
+    height: 95px;
+  }
+
+  & strong {
+    display: block;
+    margin-bottom: 6px;
+
+    font-family: $font3;
+    font-size: 18px;
+    font-weight: normal;
+    color: $color2;
+    @include upper;
+
+    
+    @media (max-width: 375px) {
+      margin-bottom: 11px;
+
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+//@mixins
+@mixin flex() {
+  display: flex;
+}
+
+@mixin upper() {
+  text-transform: uppercase;
+}

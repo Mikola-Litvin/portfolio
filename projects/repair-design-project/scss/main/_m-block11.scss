@@ -1,0 +1,241 @@
+.main-block11 {
+  height: 953px;
+
+  background: url(../assets/images/bg-block11.jpg) no-repeat 0 0 / cover;
+
+  @media (max-width: 900px) {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 375px) {
+    padding-bottom: 0;
+
+    background-image: none;
+    background-color: $bg2;
+  }
+
+  & > * {
+    width: 817px;
+    margin: 0 auto;
+    display: block;
+
+    @media (max-width: 375px) {
+      width: 100%;
+    }
+  }
+
+  & .form {
+    width: 883px;
+    height: 445px;
+    padding: 34px 184px;
+
+    color: $color1;
+
+    transform: translateY(-50%);
+    background: url(../assets/images/big-form-bg.jpg) no-repeat 0 0 / cover;
+    background-color: $bg2;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      height: auto;
+      padding: $padd1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 375px) {
+      background-image: none;
+      transform: translateY(0);
+    }
+  }
+
+  & .form__text {
+    margin-bottom: 38px;
+
+    font-family: $font3;
+    font-size: 20px;
+    text-align: center;
+    @include upper;
+    color: $color1;
+
+    @media (max-width: 375px) {
+      margin-bottom: 45px;
+    }
+  }
+
+  & .form__item {
+      width: 100%;
+  }
+
+  & .form__item:nth-of-type(1) {
+    margin-right: 49px;
+
+    @media (max-width: 375px) {
+      margin-right: 0;
+    }
+  }
+
+  & .form__item:nth-of-type(1),
+  & .form__item:nth-of-type(2) {
+    display: inline-block;
+    width: 231px;
+    margin-bottom: 47px;
+
+    @media (max-width: 375px) {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  }
+
+  & .form__label {
+    font-family: $font2;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  & .form__input-text {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    font-family: $font2;
+    font-size: 18px;
+    color: $color1;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    @media (max-width: 375px) {
+      border-color: $color1;
+    }
+  }
+
+  & .form__item_checkbox {
+    margin-top: 46px;
+    text-align: center;
+
+    @media (max-width: 375px) {
+      margin-top: 21px;
+      text-align: left;
+    }
+  }
+
+  & .form__input-checkbox {
+    display: none;
+  }
+
+  & .form__input-checkbox + .form__label {
+    font-family: $font2;
+    font-size: 16px;
+    color: $color1;
+    
+    cursor: pointer;
+  }
+
+  & .form__input-checkbox + .form__label::before {
+    content: "";
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+    vertical-align: bottom;
+
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    color: $color1;
+
+    cursor: pointer;
+
+    background-color: #e3b873;
+    border-radius: 1px;
+  }
+
+  & .form__input-checkbox:checked + .form__label::before {
+    content: "\2714";
+  }
+
+  & .form__item_submit {
+    text-align: center;
+  }
+
+  & .form__input-submit {
+    width: 213px;
+    margin-top: 46px;
+
+    @media (max-width: 375px) {
+      width: 100%;
+      margin-top: 67px;
+    }
+  }
+}
+
+.main-block11__text {
+  width: 625px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+
+  font-family: $font3;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.4;
+  color: $color2;
+  @include upper;
+
+  @media (max-width: 882px) {
+    width: 100%;
+    margin-top: 31px;
+  }
+
+  @media (max-width: 375px) {
+    order: 4;
+
+    font-size: 18px;
+    line-height: 1.38;
+  }
+
+  & .phone_no-underline {
+    font-family: $font3;
+    font-size: 20px;
+    color: $color2;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.main-block11__link {
+  display: inline-block;
+  margin-top: 18px;
+  margin-right: 10px;
+}
+
+.location {
+  width: 883px;
+  margin-top: -180px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    margin-top: 50px;
+    padding-left: $padd1;
+    padding-right: $padd1;
+  }
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.location__image {
+  width: 100%;
+
+  @media (max-width: 375px) {
+    margin-top: 28px;
+    height: 255px;
+    order: 3;
+  }
+}

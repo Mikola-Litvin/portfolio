@@ -1,0 +1,247 @@
+.main-block5 {
+  @include flex;
+  justify-content: space-between;
+  padding-bottom: 212px;
+
+
+  @media (max-width: 1279px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 508px) {
+    display: none;
+  }
+}
+
+.mb5-col_left {
+  flex-basis: 779px;
+  overflow: hidden;
+
+  background: url(../assets/images/bg-with-building.jpg) no-repeat 0 40px;
+
+  @media (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.mb5-col__list {
+  position: relative;
+
+  width: 364px;
+  margin-top: 61px;
+  float: right;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -61px;
+    left: -572px;
+
+    display: inline-block;
+    width: 636px;
+    height: 636px;
+
+    border: 3px solid $color2;
+    border-left-color: transparent;
+    border-radius: 50%;
+  }
+}
+
+.mb5-col__list-item {
+  position: relative;
+
+  font-family: $font4;
+  font-size: 18px;
+  line-height: 1.17;
+  color: $color6;
+
+  &::before {
+    position: absolute;
+
+    display: block;
+    width: 42px;
+    height: 42px;
+
+    font-family: $font3;
+    font-size: 18px;
+    text-align: center;
+    line-height: 42px;
+    color: $color1;
+
+    background-color: $bg4;
+    border: 12px solid $color1;
+    border-radius: 50%;
+  }
+
+  &:nth-of-type(1) {
+    margin-bottom: 87px;
+
+    &::before {
+      content: "01";
+
+      top: -12px;
+      left: -71px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    margin-bottom: 145px;
+    padding-left: 81px;
+
+    &::before {
+      content: "02";
+
+      top: -22px;
+      left: 12px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    margin-bottom: 137px;
+    padding-left: 102px;
+
+    &::before {
+      content: "03";
+
+      top: -22px;
+      left: 35px;
+    }
+  }
+
+  &:nth-of-type(4) {
+    padding-left: 17px;
+    padding-right: 100px;
+
+    &::before {
+      content: "04";
+
+      top: -12px;
+      left: -50px;
+    }
+  }
+}
+
+.mb5-col_right {
+  flex-basis: 608px;
+  padding-top: 51px;
+
+  @media (max-width: 1279px) {
+    flex-basis: 509px;
+  }
+
+  & .form {
+    width: 509px;
+    padding: 28px 49px;
+
+    background: url(../assets/images/form-bg.jpg) no-repeat 0 0 / cover;
+    background-color: $bg1;
+  }
+  
+  & .form__text {
+    margin-bottom: 35px;
+    padding: 0 70px;
+
+    font-family: $font1;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.25;
+    color: $color1;
+  }
+
+  & .form__item {
+      width: 100%;
+  }
+
+  & .form__item:not(:nth-of-type(3)) {
+    margin-bottom: 47px;
+  }
+
+  & .form__label {
+    font-family: $font2;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  & .form__input-text {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    font-family: $font4;
+    font-size: 18px;
+    color: $color1;
+
+    background-color: $bg1;
+    border: 0;
+    border-bottom: 1px solid $color1;
+  }
+
+  & .form__item_checkbox {
+    margin-top: 20px;
+  }
+
+  & .form__input-checkbox {
+    display: none;
+  }
+
+  & .form__input-checkbox + .form__label {
+    font-family: $font2;
+    font-size: 16px;
+    color: $color1;
+    
+    cursor: pointer;
+  }
+
+  & .form__input-checkbox + .form__label::before {
+    content: "";
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+    vertical-align: bottom;
+
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    color: $color1;
+
+    cursor: pointer;
+
+    background-color: #e3b873;
+    border-radius: 1px;
+  }
+
+  & .form__input-checkbox:checked + .form__label::before {
+    content: "\2714";
+  }
+
+  & .form__item_submit {
+    text-align: right;
+  }
+
+  & .form__input-submit {
+    width: 213px;
+    margin-top: 36px;
+  }
+}
+
+.md5-col__content {
+  width: 509px;
+  margin-top: 48px;
+  padding-left: 11px;
+  padding-right: 135px;
+
+  font-family: $font1;
+  font-size: 20px;
+  line-height: 1.25;
+  color: $color2;
+  text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+
+  & .mb5-col__image {
+    margin-top: -20px;
+    margin-right: 4px;
+    float: left;
+  }
+}

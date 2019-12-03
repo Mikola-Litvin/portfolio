@@ -1,0 +1,172 @@
+/* main-block1 */
+
+.main-block1 {
+  @include flex;
+  height: 707px;
+
+  color: $color1;
+
+  background-color: $bg1;
+
+  @media (max-width: 550px) {
+    height: 476px;
+  }
+}
+
+.main-block1__col_left {
+  flex-basis: 82px;
+  align-self: center;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+.main-block1__link {
+  position: relative;
+
+  display: block;
+  margin-top: -100px;
+  
+  font-family: $font1;
+  font-size: 14px;
+  @include upper;
+  text-decoration: none;
+  color: $color2;
+
+  transform: rotate(90deg);
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 45%;
+    right: -65px;
+
+    display: block;
+    width: 51px;
+
+    border: 1px solid $color2;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: -82px;
+
+  @include flex;
+  justify-content: center;
+  width: 247px;
+  height: 97px;
+
+  text-decoration: none;
+  color: $color1;
+  @include upper;
+
+  background-color: $bg1;
+  transform: translateY(50%);
+
+  @media (max-width: 700px) {
+    left: 0;
+  }
+
+  @media (max-width: 550px) {
+    display: none;
+  }
+
+  & span {
+    align-self: center;
+    margin-right: 18px;
+
+    font-family: $font3;
+    font-size: 14px;
+  }
+
+  &:hover {
+    color: $color2;
+  }
+}
+
+.main-block1__col_right {
+  position: relative;
+
+  @include flex;
+  flex-grow: 1;
+  align-self: stretch;
+  padding-left: 60px;
+  padding-right: $padd1;
+
+  background: url(../assets/images/bg-mb1.jpg) no-repeat 0 0 / cover;
+
+  @media (max-width: 700px) {
+    padding-left: $padd1;
+  }
+
+  @media (max-width: 550px) {
+    padding-left: $padd1;
+
+    background-image: url(../assets/images/bg-mb1-mobile.jpg);
+  }
+}
+
+.main-block1__content {
+  flex-basis: 514px;
+  align-self: center;
+  margin-top: -48px;
+
+  & .button {
+    width: 207px;
+    margin-right: 16px;
+  }
+
+  @media (max-width: 485px) {
+    flex-basis: 100%;
+    margin-top: 40px;
+
+    & .button {
+      width: 100%;
+      margin-bottom: 26px;
+    }
+  }
+}
+
+.main-block1__text {
+  width: 440px;
+  margin-bottom: 37px;
+
+  font-family: $font2;
+  font-size: 22px;
+  line-height: 1.37;
+
+  @media (max-width: 550px) {
+    width: 296px;
+    margin-bottom: 28px;
+
+    font-size: 18px;
+    line-height: 1.358;
+  }
+
+  &:nth-of-type(1),
+  & strong {
+    width: 514px;
+    margin-bottom: 17px;
+
+    font-family: $font3;
+    font-size: 40px;
+    line-height: 1.328;
+    @include upper;
+
+    @media (max-width: 550px) {
+      width: 296px;
+      margin-bottom: 7px;
+
+      font-size: 23px;
+    }
+  }
+
+  & strong {
+    color: $color2;
+    font-weight: normal;
+  }
+}
